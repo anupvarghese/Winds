@@ -1,0 +1,19 @@
+version: '2'
+services:
+  app:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - STREAM_APP_ID=''
+      - STREAM_API_KEY=''
+      - STREAM_API_SECRET=''
+      - STREAM_ANALYTICS_TOKEN=''
+      - SENDGRID_USERNAME=''
+      - SENDGRID_PASSWORD=''
+      - SENTRY_DSN=''
+      - MONGO_URI=''
+      - API_BASE_URL='http://localhost:1337'
+      - NODE_ENV=development
+    ports:
+      - "1337:1337"
